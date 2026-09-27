@@ -32,7 +32,7 @@ Qué incluye IngleX:
 - 100 miniaventuras conversacionales con audio y decisiones: aparecen una tras otra, recorren las 25 de cada curso sin repetir y después comienzan una ronda nueva.
 - Exámenes mezclados, medallas, rachas y pasaporte de progreso.
 - Perfil, curso y avance guardados únicamente en el dispositivo.
-- Demo gratuita y desbloqueo completo mediante un único pago.
+- Durante la prueba cerrada, todo el contenido está disponible.
 - Sin anuncios, cuentas ni suscripciones.
 
 IngleX está diseñada para practicar de forma autónoma, con controles grandes, instrucciones claras y sesiones breves.
