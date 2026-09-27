@@ -11,3 +11,4 @@ play-store/release/
 *.keystore
 keystore.properties
 .DS_Store
+.vercel
