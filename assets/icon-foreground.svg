@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="globe" cx="35%" cy="28%" r="76%"><stop offset="0" stop-color="#d9fffb"/><stop offset="0.48" stop-color="#28cfc4"/><stop offset="1" stop-color="#07938d"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#20263b" flood-opacity=".24"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <circle cx="460" cy="520" r="238" fill="url(#globe)" stroke="#20263b" stroke-width="30"/>
+    <path d="M325 420c52-43 108-29 130 12 18 34-14 66-61 71-55 5-105-29-69-83Z" fill="#ffd04a" stroke="#d79c10" stroke-width="13"/>
+    <path d="M499 550c79-13 126 23 120 82-4 55-60 95-118 62-48-28-59-116-2-144Z" fill="#ffd04a" stroke="#d79c10" stroke-width="13"/>
+    <ellipse cx="375" cy="392" rx="92" ry="48" fill="#fff" opacity=".34" transform="rotate(-22 375 392)"/>
+    <path d="M590 255h214c49 0 89 40 89 89v88c0 49-40 89-89 89h-87l-62 67 12-67h-77c-49 0-89-40-89-89v-88c0-49 40-89 89-89Z" fill="#fff" stroke="#20263b" stroke-width="24"/>
+    <text x="697" y="420" text-anchor="middle" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-weight="900" font-size="116" fill="#ff765f">Hi!</text>
+  </g>
+</svg>

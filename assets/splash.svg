@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2732 2732">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#85e8df"/><stop offset="0.56" stop-color="#d9fffb"/><stop offset="1" stop-color="#ffe5a3"/></linearGradient>
+    <radialGradient id="globe" cx="35%" cy="28%" r="76%"><stop offset="0" stop-color="#d9fffb"/><stop offset="0.48" stop-color="#28cfc4"/><stop offset="1" stop-color="#07938d"/></radialGradient>
+  </defs>
+  <rect width="2732" height="2732" fill="url(#bg)"/><circle cx="510" cy="470" r="220" fill="#fff" opacity=".17"/><circle cx="2290" cy="770" r="145" fill="#ff765f" opacity=".24"/>
+  <g>
+    <circle cx="1215" cy="1170" r="530" fill="url(#globe)" stroke="#20263b" stroke-width="62"/>
+    <path d="M912 956c121-95 244-65 293 25 41 77-33 149-137 160-124 13-240-66-156-185Z" fill="#ffd04a" stroke="#d79c10" stroke-width="28"/>
+    <path d="M1308 1244c181-31 290 51 276 187-10 123-137 216-269 141-109-62-134-265-7-328Z" fill="#ffd04a" stroke="#d79c10" stroke-width="28"/>
+    <path d="M1605 570h524c111 0 201 90 201 201v185c0 111-90 201-201 201h-205l-143 153 27-153h-203c-111 0-201-90-201-201V771c0-111 90-201 201-201Z" fill="#fff" stroke="#20263b" stroke-width="54"/>
+    <text x="1868" y="936" text-anchor="middle" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-weight="900" font-size="274" fill="#ff765f">Hi!</text>
+  </g>
+  <text x="1366" y="2070" text-anchor="middle" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-weight="900" font-size="292" fill="#20263b">Ingle<tspan fill="#ff765f">X</tspan></text>
+  <text x="1366" y="2240" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="76" fill="#435068">Tu aventura en inglés</text>
+</svg>
