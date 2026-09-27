@@ -57,6 +57,10 @@ window.INGLEX_CONTENT = {
     { id: "feelings", grade: 4, name: "Feelings", emoji: "😊", color: "#ab6de2", description: "Cómo nos sentimos", words: [
       ["excited", "emocionado", "🤩"], ["worried", "preocupado", "😟"], ["tired", "cansado", "🥱"], ["hungry", "hambriento", "😋"], ["thirsty", "sediento", "🥤"],
       ["angry", "enfadado", "😠"], ["surprised", "sorprendido", "😮"], ["because", "porque", "🔗"], ["today", "hoy", "📅"], ["feel", "sentirse", "💭"]
+    ]},
+    { id: "health", grade: 4, name: "Body & health", emoji: "🩺", color: "#28b7a9", description: "El cuerpo y la salud", words: [
+      ["head", "cabeza", "🙂"], ["arm", "brazo", "💪"], ["leg", "pierna", "🦵"], ["tooth", "diente", "🦷"], ["doctor", "médico", "🩺"],
+      ["headache", "dolor de cabeza", "🤕"], ["stomach ache", "dolor de barriga", "🤢"], ["cough", "tos", "😷"], ["ill", "enfermo", "🤒"], ["medicine", "medicina", "💊"]
     ]}
   ],
   sentences: {
