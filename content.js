@@ -12,7 +12,7 @@ window.INGLEX_CONTENT = {
     ]},
     { id: "colours", grade: 1, name: "Colours", emoji: "🌈", color: "#ffd04a", description: "Los colores", words: [
       ["red", "rojo", "🔴"], ["blue", "azul", "🔵"], ["green", "verde", "🟢"], ["yellow", "amarillo", "🟡"],
-      ["orange", "naranja", "🟠"], ["purple", "morado", "🟣"], ["pink", "rosa", "🌸"], ["black", "negro", "⬛"], ["white", "blanco", "⬜"]
+      ["orange", "naranja", "🟠"], ["purple", "morado", "🟣"], ["pink", "rosa", "🌸"], ["black", "negro", "🖤"], ["white", "blanco", "🤍"]
     ]},
     { id: "numbers", grade: 1, name: "Numbers", emoji: "🔢", color: "#5eb6ee", description: "Números del 1 al 20", words: [
       ["one", "uno", "1️⃣"], ["two", "dos", "2️⃣"], ["three", "tres", "3️⃣"], ["four", "cuatro", "4️⃣"], ["five", "cinco", "5️⃣"],
