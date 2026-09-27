@@ -26,7 +26,7 @@ Qué incluye IngleX:
 
 - Contenido diferenciado para 1.º, 2.º, 3.º y 4.º de Primaria.
 - Más de 120 palabras organizadas en mundos temáticos.
-- Pronunciación en inglés mediante la voz del dispositivo, sin usar el micrófono.
+- Pronunciación en inglés con audios incluidos en la aplicación, sin usar el micrófono.
 - Juegos de escuchar y elegir, parejas, traducción y orden de palabras.
 - Pequeñas lecturas adaptadas a cada curso.
 - 100 miniaventuras conversacionales con audio y decisiones: aparecen una tras otra, recorren las 25 de cada curso sin repetir y después comienzan una ronda nueva.
