@@ -27,8 +27,9 @@ Qué incluye IngleX:
 - Contenido diferenciado para 1.º, 2.º, 3.º y 4.º de Primaria.
 - Más de 120 palabras organizadas en mundos temáticos.
 - Pronunciación en inglés mediante la voz del dispositivo, sin usar el micrófono.
-- Juegos de escuchar y elegir, traducción y orden de palabras.
-- Pequeñas lecturas con comprensión para 3.º y 4.º.
+- Juegos de escuchar y elegir, parejas, traducción y orden de palabras.
+- Pequeñas lecturas adaptadas a cada curso.
+- 100 miniaventuras conversacionales con audio y decisiones: 25 por curso. La opción sorpresa recorre las 25 sin repetir.
 - Exámenes mezclados, medallas, rachas y pasaporte de progreso.
 - Perfil, curso y avance guardados únicamente en el dispositivo.
 - Demo gratuita y desbloqueo completo mediante un único pago.
@@ -40,4 +41,4 @@ Una aplicación educativa de ÓrbitaKidx.
 
 ## Notas de la versión 1.0
 
-Primera versión de IngleX: cuatro cursos de Primaria, vocabulario con audio, frases, lecturas, exámenes, medallas y progreso.
+Primera versión de IngleX: cuatro cursos de Primaria, vocabulario con audio, parejas, frases, lecturas, 100 miniaventuras, exámenes, medallas y progreso.

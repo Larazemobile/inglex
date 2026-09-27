@@ -130,6 +130,56 @@ window.INGLEX_CONTENT = {
         ["Why is Sam happy?", "Because he loves cooking", ["Because it is Saturday", "Because he loves cooking", "Because he has a new ball"]]
       ]}
     ]
+  },
+  adventures: {
+    1: [
+      { title: "A new friend", emoji: "👋", place: "At school", intro: "Conoce a una nueva compañera en clase.", scenes: [
+        { speaker: "Mia", line: "Good morning! What is your name?", prompt: "¿Qué responderías?", correct: "My name is Alex", responseEs: "Me llamo Alex", choices: ["My name is Alex", "It is a pencil", "Good night"] },
+        { speaker: "Mia", line: "What is your favourite colour?", prompt: "Elige una respuesta que tenga sentido.", correct: "I like blue", responseEs: "Me gusta el azul", choices: ["I like blue", "I have two books", "Goodbye teacher"] },
+        { speaker: "Mia", line: "See you tomorrow!", prompt: "¿Cómo te despides?", correct: "Goodbye!", responseEs: "¡Adiós!", choices: ["Goodbye!", "Thank you, red", "My name is cat"] }
+      ]},
+      { title: "The little cat", emoji: "🐱", place: "In the park", intro: "Ayuda a encontrar al dueño de un gatito.", scenes: [
+        { speaker: "Sam", line: "Look! It is a small cat.", prompt: "¿Qué animal ha encontrado Sam?", correct: "A cat", responseEs: "Un gato", choices: ["A cat", "A dog", "A bird"] },
+        { speaker: "Sam", line: "The cat is black and white.", prompt: "¿De qué colores es?", correct: "Black and white", responseEs: "Negro y blanco", choices: ["Black and white", "Red and blue", "Green and yellow"] },
+        { speaker: "Owner", line: "Thank you for finding my cat!", prompt: "¿Qué contestas?", correct: "You are welcome", responseEs: "De nada", choices: ["You are welcome", "Good morning cat", "I am yellow"] }
+      ]}
+    ],
+    2: [
+      { title: "The lost backpack", emoji: "🎒", place: "At school", intro: "Ayuda a Ben a reconocer su mochila.", scenes: [
+        { speaker: "Ben", line: "I cannot find my backpack.", prompt: "¿Qué objeto busca Ben?", correct: "His backpack", responseEs: "Su mochila", choices: ["His backpack", "His ruler", "His notebook"] },
+        { speaker: "Teacher", line: "What colour is your backpack?", prompt: "Ben quiere decir que es azul.", correct: "It is blue", responseEs: "Es azul", choices: ["It is blue", "They are books", "I am eight"] },
+        { speaker: "Ben", line: "Yes, that is my backpack. Thank you!", prompt: "¿Qué responde la profesora?", correct: "You are welcome", responseEs: "De nada", choices: ["You are welcome", "It is a rabbit", "Good night"] }
+      ]},
+      { title: "A day at the zoo", emoji: "🦁", place: "At the zoo", intro: "Habla sobre los animales que ves.", scenes: [
+        { speaker: "Guide", line: "This animal is big and grey.", prompt: "¿Qué animal puede ser?", correct: "An elephant", responseEs: "Un elefante", choices: ["An elephant", "A rabbit", "A bird"] },
+        { speaker: "Guide", line: "Which animal can swim?", prompt: "Elige el animal que nada.", correct: "The fish", responseEs: "El pez", choices: ["The fish", "The monkey", "The lion"] },
+        { speaker: "Mum", line: "It is time to go home.", prompt: "¿Cómo te despides del guía?", correct: "Goodbye and thank you", responseEs: "Adiós y gracias", choices: ["Goodbye and thank you", "My sister is six", "The turtle is green"] }
+      ]}
+    ],
+    3: [
+      { title: "Breakfast time", emoji: "🥣", place: "At a café", intro: "Pide el desayuno en inglés.", scenes: [
+        { speaker: "Waiter", line: "Good morning. What would you like?", prompt: "Quieres leche y tostadas.", correct: "Can I have milk and toast, please?", responseEs: "¿Me pone leche y tostadas, por favor?", choices: ["Can I have milk and toast, please?", "I wear milk and toast", "The café is cloudy"] },
+        { speaker: "Waiter", line: "Would you like anything else?", prompt: "No quieres nada más.", correct: "No, thank you", responseEs: "No, gracias", choices: ["No, thank you", "I go to bed at eight", "It is opposite the park"] },
+        { speaker: "Waiter", line: "Here is your breakfast. Enjoy!", prompt: "¿Qué respuesta es educada?", correct: "Thank you very much", responseEs: "Muchas gracias", choices: ["Thank you very much", "I am wearing breakfast", "Turn left, please"] }
+      ]},
+      { title: "A rainy morning", emoji: "🌧️", place: "Before school", intro: "Prepárate para ir al cole con lluvia.", scenes: [
+        { speaker: "Dad", line: "It is rainy and cold today.", prompt: "¿Qué prenda conviene ponerse?", correct: "I need my coat", responseEs: "Necesito mi abrigo", choices: ["I need my coat", "I need my swimsuit", "I need my sandals"] },
+        { speaker: "Dad", line: "Do you have your homework?", prompt: "Sí, lo llevas en la mochila.", correct: "Yes, it is in my backpack", responseEs: "Sí, está en mi mochila", choices: ["Yes, it is in my backpack", "No, it is sunny", "Yes, I have breakfast at school"] },
+        { speaker: "Friend", line: "We can walk to school together.", prompt: "Acepta la propuesta.", correct: "Great idea! Let's go", responseEs: "¡Buena idea! Vamos", choices: ["Great idea! Let's go", "I do my homework yesterday", "The school is hungry"] }
+      ]}
+    ],
+    4: [
+      { title: "Finding the library", emoji: "📚", place: "Around town", intro: "Pregunta cómo llegar a la biblioteca.", scenes: [
+        { speaker: "You", line: "Excuse me, where is the library?", prompt: "¿Qué información necesitas?", correct: "Directions to the library", responseEs: "Indicaciones para llegar a la biblioteca", choices: ["Directions to the library", "The price of a coat", "A recipe for lunch"] },
+        { speaker: "Neighbour", line: "Turn left at the station. It is opposite the park.", prompt: "¿Dónde está la biblioteca?", correct: "Opposite the park", responseEs: "Enfrente del parque", choices: ["Opposite the park", "Behind the hospital", "Between two stations"] },
+        { speaker: "Neighbour", line: "It closes at six o'clock.", prompt: "Son las cinco. ¿Todavía puedes ir?", correct: "Yes, it is still open", responseEs: "Sí, todavía está abierta", choices: ["Yes, it is still open", "No, it closed at four", "No, it opens tomorrow"] }
+      ]},
+      { title: "Weekend plans", emoji: "🚲", place: "After school", intro: "Organiza un plan con una amiga.", scenes: [
+        { speaker: "Lily", line: "Would you like to ride our bikes on Saturday?", prompt: "Acepta la invitación.", correct: "Yes, I would love to", responseEs: "Sí, me encantaría", choices: ["Yes, I would love to", "I rode a supermarket", "Because I am a bicycle"] },
+        { speaker: "Lily", line: "Let's meet next to the sports centre.", prompt: "¿Dónde habéis quedado?", correct: "Next to the sports centre", responseEs: "Al lado del polideportivo", choices: ["Next to the sports centre", "Opposite Saturday", "Between our bikes"] },
+        { speaker: "Lily", line: "I am excited because the weather will be sunny!", prompt: "¿Por qué está emocionada Lily?", correct: "Because it will be sunny", responseEs: "Porque hará sol", choices: ["Because it will be sunny", "Because she cannot ride", "Because the station is closed"] }
+      ]}
+    ]
   }
 };
 
