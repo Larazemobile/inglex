@@ -82,6 +82,30 @@ window.INGLEX_CONTENT = {
     ]
   },
   readings: {
+    1: [
+      { title: "My cat", text: "This is my cat. It is black and white. It has two green eyes. I love my cat.", questions: [
+        ["What animal is it?", "A cat", ["A dog", "A cat", "A rabbit"]],
+        ["What colours is the cat?", "Black and white", ["Brown", "Black and white", "Orange"]],
+        ["How many eyes does it have?", "Two", ["One", "Three", "Two"]]
+      ]},
+      { title: "At school", text: "I have a red pencil and two blue books. My school bag is green. The teacher says hello.", questions: [
+        ["What colour is the pencil?", "Red", ["Blue", "Red", "Green"]],
+        ["How many books are there?", "Two", ["Two", "Four", "One"]],
+        ["Who says hello?", "The teacher", ["The teacher", "My brother", "The cat"]]
+      ]}
+    ],
+    2: [
+      { title: "Ben's family", text: "Ben lives with his mum, dad and little sister. His sister is six. They have a small brown dog called Max.", questions: [
+        ["Who is six?", "Ben's sister", ["Ben", "Ben's sister", "Ben's dad"]],
+        ["What pet do they have?", "A dog", ["A cat", "A rabbit", "A dog"]],
+        ["What colour is Max?", "Brown", ["Black", "Brown", "White"]]
+      ]},
+      { title: "My classroom", text: "There are twelve desks in my classroom. My pencil case is under my chair. Our teacher has a big map next to the board.", questions: [
+        ["How many desks are there?", "Twelve", ["Ten", "Twelve", "Twenty"]],
+        ["Where is the pencil case?", "Under the chair", ["On the desk", "Under the chair", "In the bag"]],
+        ["What is next to the board?", "A map", ["A window", "A clock", "A map"]]
+      ]}
+    ],
     3: [
       { title: "Lucy's morning", text: "Lucy gets up at seven o'clock. She has milk and toast for breakfast. Then she puts on her blue jumper and walks to school with her brother.", questions: [
         ["What does Lucy have for breakfast?", "Milk and toast", ["Rice and chicken", "An apple", "Milk and toast"]],
