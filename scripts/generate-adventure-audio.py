@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the neural English audio used by every IngleX mini-adventure.
+"""Generate the Andrew neural English audio used throughout IngleX.
 
 Install the one-time generator with: python3 -m pip install edge-tts
 """
@@ -7,65 +7,64 @@ Install the one-time generator with: python3 -m pip install edge-tts
 import asyncio
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 import edge_tts
 
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUT = ROOT / "assets" / "audio" / "adventures"
-
-FEMALE_CHILDREN = {
-    "amy", "ella", "emma", "eva", "ivy", "lily", "lina", "lucy", "maya",
-    "mia", "nina", "nora", "ruby", "sara", "sister",
-}
-MALE_CHILDREN = {"ben", "leo", "max", "noah", "sam", "tom"}
-FEMALE_ADULTS = {"aunt", "grandma", "librarian", "mum", "owner", "shop assistant", "teacher"}
-MALE_ADULTS = {"coach", "dad", "grandad", "grandpa", "guide", "neighbour", "uncle", "waiter"}
+ADVENTURE_OUTPUT = ROOT / "assets" / "audio" / "adventures"
+ENGLISH_OUTPUT = ROOT / "assets" / "audio" / "english"
+VOICE = "en-US-AndrewMultilingualNeural"
+FORCE = "--force" in sys.argv
 
 
-def voice_for(speaker: str) -> str:
-    name = speaker.lower()
-    if name in FEMALE_CHILDREN:
-        return "en-GB-MaisieNeural"
-    if name in MALE_CHILDREN:
-        return "en-GB-RyanNeural"
-    if name in FEMALE_ADULTS or name.startswith("aunt"):
-        return "en-GB-SoniaNeural"
-    if name in MALE_ADULTS or name.startswith("uncle"):
-        return "en-GB-ThomasNeural"
-    return "en-GB-LibbyNeural"
-
-
-def load_scenes():
+def load_manifest():
     javascript = r"""
 const fs=require('fs'),vm=require('vm');
 const c={}; c.window=c; vm.createContext(c);
 vm.runInContext(fs.readFileSync('content.js','utf8'),c);
 vm.runInContext(fs.readFileSync('adventures.js','utf8'),c);
-const rows=[];
+const adventures=[];
 Object.values(c.INGLEX_CONTENT.adventures).flat().forEach(story =>
-  story.scenes.forEach((scene,index) => rows.push({
-    file: story.id+'-s'+(index+1)+'.mp3', speaker: scene.speaker, text: scene.line
+  story.scenes.forEach((scene,index) => adventures.push({
+    file: story.id+'-s'+(index+1)+'.mp3', text: scene.line
   }))
 );
-process.stdout.write(JSON.stringify(rows));
+function audioKey(text){
+  let h=2166136261;
+  for(let i=0;i<text.length;i++){
+    h^=text.charCodeAt(i); h=Math.imul(h,16777619);
+  }
+  return (h>>>0).toString(16).padStart(8,'0');
+}
+const texts=[];
+c.INGLEX_CONTENT.themes.forEach(theme => theme.words.forEach(word => texts.push(word.en)));
+Object.values(c.INGLEX_CONTENT.sentences).flat().forEach(sentence => texts.push(sentence[0]));
+const english=[...new Set(texts)].map(text => ({file:audioKey(text)+'.mp3',text}));
+const collisions=new Map();
+english.forEach(row => {
+  if(collisions.has(row.file) && collisions.get(row.file)!==row.text) {
+    throw new Error('Audio hash collision');
+  }
+  collisions.set(row.file,row.text);
+});
+process.stdout.write(JSON.stringify({adventures,english}));
 """
     raw = subprocess.check_output(["node", "-e", javascript], cwd=ROOT, text=True)
     return json.loads(raw)
 
 
-async def generate(row, semaphore):
-    destination = OUTPUT / row["file"]
-    if destination.exists() and destination.stat().st_size > 1_000:
+async def generate(row, output, semaphore):
+    destination = output / row["file"]
+    if not FORCE and destination.exists() and destination.stat().st_size > 1_000:
         return
     temporary = destination.with_suffix(".tmp.mp3")
     async with semaphore:
         for attempt in range(3):
             try:
-                await edge_tts.Communicate(
-                    row["text"], voice_for(row["speaker"]), rate="-8%"
-                ).save(temporary)
+                await edge_tts.Communicate(row["text"], VOICE, rate="-5%").save(temporary)
                 temporary.replace(destination)
                 return
             except Exception:
@@ -76,14 +75,29 @@ async def generate(row, semaphore):
 
 
 async def main():
-    rows = load_scenes()
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+    manifest = load_manifest()
+    ADVENTURE_OUTPUT.mkdir(parents=True, exist_ok=True)
+    ENGLISH_OUTPUT.mkdir(parents=True, exist_ok=True)
     semaphore = asyncio.Semaphore(6)
-    await asyncio.gather(*(generate(row, semaphore) for row in rows))
-    files = list(OUTPUT.glob("*.mp3"))
-    if len(files) != len(rows):
-        raise RuntimeError(f"Expected {len(rows)} audio files, found {len(files)}")
-    print(f"Generated {len(files)} neural adventure clips in {OUTPUT}")
+    jobs = [generate(row, ADVENTURE_OUTPUT, semaphore) for row in manifest["adventures"]]
+    jobs += [generate(row, ENGLISH_OUTPUT, semaphore) for row in manifest["english"]]
+    await asyncio.gather(*jobs)
+    adventure_files = list(ADVENTURE_OUTPUT.glob("*.mp3"))
+    english_files = list(ENGLISH_OUTPUT.glob("*.mp3"))
+    if len(adventure_files) != len(manifest["adventures"]):
+        raise RuntimeError(
+            f"Expected {len(manifest['adventures'])} adventure files, "
+            f"found {len(adventure_files)}"
+        )
+    if len(english_files) != len(manifest["english"]):
+        raise RuntimeError(
+            f"Expected {len(manifest['english'])} English files, "
+            f"found {len(english_files)}"
+        )
+    print(
+        f"Generated {len(adventure_files)} adventure clips and "
+        f"{len(english_files)} activity clips with {VOICE}"
+    )
 
 
 if __name__ == "__main__":
