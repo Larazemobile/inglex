@@ -49,10 +49,12 @@
     state.loading = true;
     return billing.getStatus().then(function (result) {
       state.loading = false;
-      state.owned = !!result.owned;
       state.available = !!result.available;
+      // While the Google Play product is not configured, keep the whole
+      // closed-test build open so testers and reviewers can use every activity.
+      state.owned = !!result.owned || !state.available;
       if (result.price) state.price = result.price;
-      saveOwned(state.owned);
+      saveOwned(!!result.owned);
       return state;
     }).catch(function () {
       state.loading = false;
