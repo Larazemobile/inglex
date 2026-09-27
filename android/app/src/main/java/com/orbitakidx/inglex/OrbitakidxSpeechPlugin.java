@@ -22,7 +22,7 @@ public class OrbitakidxSpeechPlugin extends Plugin implements TextToSpeech.OnIni
     @Override
     public void onInit(int status) {
         if (status != TextToSpeech.SUCCESS || textToSpeech == null) return;
-        int language = textToSpeech.setLanguage(Locale.US);
+        int language = textToSpeech.setLanguage(Locale.UK);
         ready = language != TextToSpeech.LANG_MISSING_DATA
             && language != TextToSpeech.LANG_NOT_SUPPORTED;
         textToSpeech.setSpeechRate(0.82f);
@@ -39,7 +39,7 @@ public class OrbitakidxSpeechPlugin extends Plugin implements TextToSpeech.OnIni
             call.reject("La voz inglesa no está disponible en el dispositivo.");
             return;
         }
-        String language = call.getString("language", "en-US");
+        String language = call.getString("language", "en-GB");
         Locale locale = Locale.forLanguageTag(language);
         int result = textToSpeech.setLanguage(locale);
         if (result == TextToSpeech.LANG_MISSING_DATA
