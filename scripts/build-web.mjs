@@ -17,5 +17,6 @@ await cp(join(root, "inglex.css"), join(output, "inglex.css"));
 await cp(join(root, "arcade-avatars.js"), join(output, "arcade-avatars.js"));
 await cp(join(root, "favicon-32.png"), join(output, "favicon-32.png"));
 await cp(join(root, "apple-touch-icon.png"), join(output, "apple-touch-icon.png"));
+await cp(join(root, "assets", "audio"), join(output, "assets", "audio"), { recursive: true });
 
 console.log("IngleX web assets copied to www/");
