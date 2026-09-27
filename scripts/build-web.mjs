@@ -11,6 +11,8 @@ await cp(join(root, "index.html"), join(output, "index.html"));
 await cp(join(root, "content.js"), join(output, "content.js"));
 await cp(join(root, "privacy.html"), join(output, "privacy.html"));
 await cp(join(root, "billing.js"), join(output, "billing.js"));
+await cp(join(root, "arcade.css"), join(output, "arcade.css"));
+await cp(join(root, "arcade-avatars.js"), join(output, "arcade-avatars.js"));
 await cp(join(root, "favicon-32.png"), join(output, "favicon-32.png"));
 await cp(join(root, "apple-touch-icon.png"), join(output, "apple-touch-icon.png"));
 

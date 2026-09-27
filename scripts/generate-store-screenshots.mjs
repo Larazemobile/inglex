@@ -11,6 +11,8 @@ const temp = await mkdtemp(join(tmpdir(), "inglex-store-"));
 await mkdir(output, { recursive: true });
 await cp(join(root, "content.js"), join(temp, "content.js"));
 await cp(join(root, "billing.js"), join(temp, "billing.js"));
+await cp(join(root, "arcade.css"), join(temp, "arcade.css"));
+await cp(join(root, "arcade-avatars.js"), join(temp, "arcade-avatars.js"));
 
 const base = await readFile(join(root, "index.html"), "utf8");
 const marker = "updateTop();renderHome();if(DATA.onboarded)$(\"splash\").style.display=\"none\";OrbitakidxAccess.init().then(renderHome);window.scrollTo(0,0);";
